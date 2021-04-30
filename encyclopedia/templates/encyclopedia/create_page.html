@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create New Page
+{% endblock %}
+
+{% block body %}
+    <div style="text-align: center;">
+    <form method="POST">
+        {% csrf_token %}
+        <label for="new_page" style="display: block;margin-bottom: 10px;font-size:30px; text-align: left;">Add New Page</label>
+        <h1 style="text-align: left;font-size: x-large;">Title</h1>
+        <div style="text-align: left;"><textarea id="new_page_t" name="usr_page_title" style="resize: none;height: 30px;"></textarea></div>
+        <h1 style="text-align: left;font-size: x-large;">Content</h1>
+        <div style="text-align: left;"><textarea id="new_page" name="usr_data_page" style="height: 400px;"></textarea></div>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+{% endblock %}
